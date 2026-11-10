@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 
 import { site } from '../../data/site'
+import { asset } from '../lib/asset'
 import { Lines, Magnetic, Reveal } from './motion'
 import { useLocalTime } from './Nav'
 
@@ -14,12 +15,20 @@ export function Footer() {
   async function submit(e: FormEvent) {
     e.preventDefault()
     setState('sending')
-    const response = await fetch('/api/contact', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(form) })
-    if (response.ok) setState('done')
-    else {
-      setState('error')
-      setError(((await response.json()) as { error?: string }).error ?? 'Something went wrong.')
+    try {
+      // GitHub Pages serves static files only, so the Worker route is absent
+      // there and the form falls back to a mailto link.
+      const response = await fetch(asset('api/contact'), { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(form) })
+      if (response.ok) {
+        setState('done')
+        return
+      }
+      const data = (await response.json().catch(() => ({}))) as { error?: string }
+      setError(data.error ?? 'The contact form is not connected on this build.')
+    } catch {
+      setError('The contact form is not connected on this build.')
     }
+    setState('error')
   }
 
   const field = 'h-14 w-full rounded-control border border-line-strong bg-transparent px-5 text-[15px] placeholder:text-faint transition-colors focus:border-fg focus:outline-none'
@@ -65,7 +74,18 @@ export function Footer() {
                 <button type="submit" disabled={state === 'sending'} className="h-14 rounded-control border border-fg text-[15px] font-medium transition-colors hover:bg-fg hover:text-bg disabled:opacity-50">
                   Send
                 </button>
-                {state === 'error' && <p className="text-[13px] text-accent">{error}</p>}
+                {state === 'error' && (
+                  <p className="text-[13px] leading-relaxed text-muted">
+                    {error}{' '}
+                    <a
+                      className="link-draw text-fg"
+                      href={`mailto:${site.email}?subject=${encodeURIComponent('Hello from your portfolio')}&body=${encodeURIComponent(form.message)}`}
+                    >
+                      Email me directly instead
+                    </a>
+                    .
+                  </p>
+                )}
               </form>
             )}
           </Reveal>
