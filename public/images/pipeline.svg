@@ -1,15 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Deployment log showing checkout, install, build and deploy stages passing">
   <rect width="1600" height="1000" fill="#e8e2d6"/>
-  <line x1="320" y1="500" x2="1280" y2="500" stroke="#2b2925" stroke-opacity="0.25" stroke-width="4"/>
-  <g fill="#2b2925" fill-opacity="0.08" stroke="#2b2925" stroke-opacity="0.22" stroke-width="2">
-    <rect x="250" y="430" width="140" height="140" rx="36"/>
-    <rect x="530" y="430" width="140" height="140" rx="36"/>
-    <rect x="810" y="430" width="140" height="140" rx="36"/>
-    <rect x="1090" y="430" width="140" height="140" rx="36"/>
+  <rect x="388" y="150" width="840" height="680" rx="16" fill="#2b2925" fill-opacity="0.16"/>
+  <rect x="380" y="140" width="840" height="680" rx="16" fill="#23211e"/>
+
+  <circle cx="420" cy="178" r="7" fill="#45413a"/>
+  <circle cx="444" cy="178" r="7" fill="#45413a"/>
+  <circle cx="468" cy="178" r="7" fill="#45413a"/>
+  <text x="500" y="183" font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="13" fill="#9a948a">deploy-pages.yml</text>
+  <line x1="380" y1="204" x2="1220" y2="204" stroke="#34302a"/>
+
+  <g font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="20" fill="#e3ded4">
+    <text x="420" y="280"><tspan fill="#8f9bff">$</tspan> git push origin main</text>
+
+    <text x="420" y="336">→ checkout</text>
+    <path d="M1060 329 l8 9 l16 -20" stroke="#8f9bff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1180" y="336" text-anchor="end" font-size="15" fill="#8d877d">1s</text>
+
+    <text x="420" y="392">→ bun install</text>
+    <path d="M1060 385 l8 9 l16 -20" stroke="#8f9bff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1180" y="392" text-anchor="end" font-size="15" fill="#8d877d">16s</text>
+
+    <text x="420" y="448">→ build:pages</text>
+    <path d="M1060 441 l8 9 l16 -20" stroke="#8f9bff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1180" y="448" text-anchor="end" font-size="15" fill="#8d877d">0.5s</text>
+
+    <text x="420" y="504">→ upload artifact</text>
+    <path d="M1060 497 l8 9 l16 -20" stroke="#8f9bff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1180" y="504" text-anchor="end" font-size="15" fill="#8d877d">3s</text>
+
+    <text x="420" y="560">→ deploy pages</text>
+    <path d="M1060 553 l8 9 l16 -20" stroke="#8f9bff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1180" y="560" text-anchor="end" font-size="15" fill="#8d877d">12s</text>
+
+    <text x="420" y="616" fill="#8d877d">done · 0 errors</text>
+    <text x="420" y="690" font-size="15" fill="#8d877d">main · 75817d7 · success</text>
   </g>
-  <rect x="690" y="430" width="140" height="140" rx="36" fill="#2f3bff"/>
-  <circle cx="320" cy="640" r="8" fill="#2b2925" fill-opacity="0.3"/>
-  <circle cx="600" cy="640" r="8" fill="#2b2925" fill-opacity="0.3"/>
-  <circle cx="880" cy="640" r="8" fill="#2b2925" fill-opacity="0.3"/>
-  <circle cx="1160" cy="640" r="8" fill="#2b2925" fill-opacity="0.3"/>
+
+  <rect x="380" y="760" width="840" height="60" fill="#1b1a18"/>
+  <text x="420" y="797" font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="13" fill="#8d877d">github-pages · run 42879684960 · completed</text>
 </svg>

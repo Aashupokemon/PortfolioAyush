@@ -1,13 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Portfolio review statement showing allocation and holdings with a performance chart">
   <rect width="1600" height="1000" fill="#d8d4e4"/>
-  <g stroke="#2b2925" stroke-opacity="0.1" stroke-width="2">
-    <line x1="240" y1="300" x2="1360" y2="300"/>
-    <line x1="240" y1="460" x2="1360" y2="460"/>
-    <line x1="240" y1="620" x2="1360" y2="620"/>
-    <line x1="240" y1="780" x2="1360" y2="780"/>
+  <rect x="476" y="104" width="660" height="820" rx="8" fill="#2b2925" fill-opacity="0.07"/>
+  <rect x="470" y="90" width="660" height="820" rx="8" fill="#fbfaf6" stroke="#2b2925" stroke-opacity="0.14"/>
+
+  <text x="510" y="155" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2b2925" fill-opacity="0.78">Portfolio review</text>
+  <text x="510" y="180" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#2b2925" fill-opacity="0.45">Consolidated holdings · 31 March 2026</text>
+  <line x1="510" y1="202" x2="1090" y2="202" stroke="#2b2925" stroke-opacity="0.14"/>
+
+  <rect x="510" y="228" width="260" height="22" rx="8" fill="#2f3bff" fill-opacity="0.85"/>
+  <rect x="776" y="228" width="190" height="22" rx="8" fill="#2b2925" fill-opacity="0.35"/>
+  <rect x="972" y="228" width="118" height="22" rx="8" fill="#2b2925" fill-opacity="0.14"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#2b2925" fill-opacity="0.55">
+    <rect x="510" y="280" width="10" height="10" rx="2" fill="#2f3bff" fill-opacity="0.85"/>
+    <text x="530" y="290">Equity 45%</text>
+    <rect x="700" y="280" width="10" height="10" rx="2" fill="#2b2925" fill-opacity="0.35"/>
+    <text x="720" y="290">Debt 33%</text>
+    <rect x="860" y="280" width="10" height="10" rx="2" fill="#2b2925" fill-opacity="0.14"/>
+    <text x="880" y="290">Gold 20%</text>
   </g>
-  <path d="M240 720 C 360 700, 430 590, 540 610 S 700 760, 820 640 S 1010 420, 1140 470 S 1300 330, 1360 350 L1360 800 L240 800 Z" fill="#2f3bff" fill-opacity="0.14"/>
-  <path d="M240 720 C 360 700, 430 590, 540 610 S 700 760, 820 640 S 1010 420, 1140 470 S 1300 330, 1360 350" fill="none" stroke="#2b2925" stroke-opacity="0.55" stroke-width="4"/>
-  <circle cx="820" cy="640" r="16" fill="#2f3bff"/>
-  <circle cx="1140" cy="470" r="16" fill="#2b2925" fill-opacity="0.4"/>
+
+  <text x="510" y="350" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4" fill="#2b2925" fill-opacity="0.42">HOLDING</text>
+  <text x="960" y="350" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4" fill="#2b2925" fill-opacity="0.42">VALUE</text>
+  <text x="1085" y="350" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4" fill="#2b2925" fill-opacity="0.42">1 YEAR</text>
+
+  <g stroke="#2b2925" stroke-opacity="0.09">
+    <line x1="500" y1="362" x2="1090" y2="362"/>
+    <line x1="500" y1="416" x2="1090" y2="416"/>
+    <line x1="500" y1="470" x2="1090" y2="470"/>
+    <line x1="500" y1="524" x2="1090" y2="524"/>
+    <line x1="500" y1="578" x2="1090" y2="578"/>
+    <line x1="500" y1="632" x2="1090" y2="632"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="15.5" fill="#2b2925" fill-opacity="0.8">
+    <text x="510" y="396">Liquid fund · direct</text>
+    <text x="510" y="450">Index fund · large cap</text>
+    <text x="510" y="504">Bank fixed deposit</text>
+    <text x="510" y="558">Gold ETF</text>
+    <text x="510" y="612">Debt · short duration</text>
+  </g>
+
+  <g font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="15" fill="#2b2925" fill-opacity="0.85" text-anchor="end">
+    <text x="960" y="396">5,84,200</text>
+    <text x="960" y="450">4,12,650</text>
+    <text x="960" y="504">3,00,000</text>
+    <text x="960" y="558">1,48,900</text>
+    <text x="960" y="612">2,05,400</text>
+  </g>
+
+  <g font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="15" fill="#2f3bff" text-anchor="end">
+    <text x="1085" y="396">+6.1%</text>
+    <text x="1085" y="450">+12.4%</text>
+    <text x="1085" y="504">+7.1%</text>
+    <text x="1085" y="558">+18.2%</text>
+    <text x="1085" y="612">+7.4%</text>
+  </g>
+
+  <g stroke="#2b2925" stroke-opacity="0.07">
+    <line x1="510" y1="700" x2="1090" y2="700"/>
+    <line x1="510" y1="755" x2="1090" y2="755"/>
+    <line x1="510" y1="810" x2="1090" y2="810"/>
+  </g>
+  <path d="M510 806 C 580 800, 620 742, 690 752 S 790 812, 850 748 S 950 668, 1010 700 S 1060 652, 1090 636 L1090 848 L510 848 Z" fill="#2f3bff" fill-opacity="0.1"/>
+  <path d="M510 806 C 580 800, 620 742, 690 752 S 790 812, 850 748 S 950 668, 1010 700 S 1060 652, 1090 636" fill="none" stroke="#2f3bff" stroke-width="3"/>
+  <circle cx="850" cy="748" r="6" fill="#2f3bff"/>
+  <circle cx="1090" cy="636" r="6" fill="#2f3bff"/>
+  <line x1="510" y1="848" x2="1090" y2="848" stroke="#2b2925" stroke-opacity="0.18"/>
 </svg>

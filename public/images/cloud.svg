@@ -1,16 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Terraform file declaring AWS, Azure and OpenStack providers">
   <rect width="1600" height="1000" fill="#dbe0f5"/>
-  <g fill="none" stroke="#2b2925" stroke-opacity="0.2" stroke-width="2">
-    <ellipse cx="800" cy="500" rx="520" ry="180" transform="rotate(-16 800 500)"/>
-    <ellipse cx="800" cy="500" rx="360" ry="300" transform="rotate(38 800 500)"/>
-    <circle cx="800" cy="500" r="240"/>
+  <rect x="488" y="150" width="640" height="700" rx="16" fill="#2b2925" fill-opacity="0.16"/>
+  <rect x="480" y="140" width="640" height="700" rx="16" fill="#23211e"/>
+
+  <circle cx="516" cy="174" r="7" fill="#4a463f"/>
+  <circle cx="540" cy="174" r="7" fill="#4a463f"/>
+  <circle cx="564" cy="174" r="7" fill="#4a463f"/>
+  <text x="600" y="179" font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="13" fill="#9a948a">main.tf</text>
+  <line x1="480" y1="198" x2="1120" y2="198" stroke="#34302a"/>
+
+  <g font-family="ui-monospace, Consolas, 'Courier New', monospace" font-size="17" xml:space="preserve" fill="#e3ded4">
+    <text x="510" y="240" font-size="13" fill="#6b665c">1</text>
+    <text x="545" y="240"><tspan fill="#8f9bff">terraform</tspan> {</text>
+
+    <text x="510" y="272" font-size="13" fill="#6b665c">2</text>
+    <text x="545" y="272">  <tspan fill="#8f9bff">required_providers</tspan> {</text>
+
+    <text x="510" y="304" font-size="13" fill="#6b665c">3</text>
+    <text x="545" y="304">    aws       = { source = <tspan fill="#d9cfa6">"hashicorp/aws"</tspan> }</text>
+
+    <text x="510" y="336" font-size="13" fill="#6b665c">4</text>
+    <text x="545" y="336">    azurerm   = { source = <tspan fill="#d9cfa6">"hashicorp/azurerm"</tspan> }</text>
+
+    <text x="510" y="368" font-size="13" fill="#6b665c">5</text>
+    <text x="545" y="368">    openstack = { source = <tspan fill="#d9cfa6">"openstack"</tspan> }</text>
+
+    <text x="510" y="400" font-size="13" fill="#6b665c">6</text>
+    <text x="545" y="400">  }</text>
+
+    <text x="510" y="432" font-size="13" fill="#6b665c">7</text>
+    <text x="545" y="432">}</text>
+
+    <text x="510" y="488" font-size="13" fill="#6b665c">9</text>
+    <text x="545" y="488"><tspan fill="#8f9bff">module</tspan> <tspan fill="#d9cfa6">"cluster"</tspan> {</text>
+
+    <text x="510" y="520" font-size="13" fill="#6b665c">10</text>
+    <text x="545" y="520">  source   = <tspan fill="#d9cfa6">"./modules/k8s"</tspan></text>
+
+    <text x="510" y="552" font-size="13" fill="#6b665c">11</text>
+    <text x="545" y="552">  provider = aws.frankfurt</text>
+
+    <text x="510" y="584" font-size="13" fill="#6b665c">12</text>
+    <text x="545" y="584">  nodes    = <tspan fill="#d9cfa6">3</tspan></text>
+
+    <text x="510" y="616" font-size="13" fill="#6b665c">13</text>
+    <text x="545" y="616">}</text>
   </g>
-  <g fill="#2b2925" fill-opacity="0.35">
-    <circle cx="1252" cy="333" r="16"/>
-    <circle cx="397" cy="754" r="16"/>
-    <circle cx="1000" cy="238" r="16"/>
-    <circle cx="628" cy="700" r="16"/>
-    <circle cx="800" cy="740" r="16"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#cfc9bd">
+    <rect x="529" y="700" width="170" height="44" rx="10" fill="none" stroke="#4a463f"/>
+    <text x="614" y="728" text-anchor="middle">AWS</text>
+    <rect x="715" y="700" width="170" height="44" rx="10" fill="none" stroke="#4a463f"/>
+    <text x="800" y="728" text-anchor="middle">AZURE</text>
+    <rect x="901" y="700" width="170" height="44" rx="10" fill="none" stroke="#4a463f"/>
+    <text x="986" y="728" text-anchor="middle">OPENSTACK</text>
   </g>
-  <circle cx="800" cy="500" r="34" fill="#2f3bff"/>
 </svg>
